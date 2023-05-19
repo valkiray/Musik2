@@ -1,0 +1,78 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Halaman Edit Lagu</title>
+</head>
+<div class="flex items-center justify-center min-h-screen">
+  <form method="POST" class="w-full max-w-sm" action="/lagu/<%= lagu._id %>/update">
+    <div class="md:flex md:items-center mb-6">
+      <div class="md:w-1/3">
+        <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="judul_lagu">
+          Judul Lagu
+        </label>
+      </div>
+      <div class="md:w-2/3">
+        <input name="judul_lagu" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="judul_lagu" type="text" value="<%= lagu.judul_lagu%>">
+      </div>
+    </div>
+    <div class="md:flex md:items-center mb-6">
+      <div class="md:w-1/3">
+        <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="artis">
+          Artis
+        </label>
+      </div>
+      <div class="md:w-2/3">
+        <input name="artis" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="artis" type="text" value="<%= lagu.artis%>">
+      </div>
+    </div>
+    <div class="md:flex md:items-center mb-6">
+      <div class="md:w-1/3">
+        <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="album">
+          Album
+        </label>
+      </div>
+      <div class="md:w-2/3">
+        <input name="album" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="album" type="text" value="<%= lagu.album%>">
+      </div>
+    </div>
+    <div class="md:flex md:items-center mb-6">
+      <div class="md:w-1/3">
+        <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="durasi">
+          Durasi
+        </label>
+      </div>
+      <div class="md:w-2/3">
+        <input name="durasi" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="durasi" type="text" value="<%= lagu.durasi%>">
+      </div>
+    </div>
+    <div class="md:flex md:items-center mb-6">
+      <div class="md:w-1/3">
+        <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="size">
+          Size
+        </label>
+      </div>
+      <div class="md:w-2/3">
+        <input name="size" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="size" type="text" value="<%= lagu.size%>">
+      </div>
+    </div>
+    <div class="md:flex md:items-center mb-6">
+      <div class="md:w-1/3">
+        <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="urlLagu">
+          URL Lagu
+        </label>
+      </div>
+      <div class="md:w-2/3">
+        <input name="urlLagu" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="urlLagu" type="text" value="<%= lagu.urlLagu%>">
+      </div>
+    </div>
+    <div class="md:flex md:items-center">
+      <div class="md:w-1/3"></div>
+      <div class="md:w-2/3">
+        <button class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit">
+          EDIT DATA!
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

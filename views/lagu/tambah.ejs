@@ -1,0 +1,37 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Halaman Tambah Lagu</title>
+</head>
+<div class="flex items-center justify-center min-h-screen">
+  <form method="post" class="w-full max-w-sm" action="/lagu/create" enctype="multipart/form-data">
+  <div class="mb-4">
+    <label class="block text-gray-700 text-sm font-bold mb-2" for="judul_lagu">
+      Judul Lagu
+    </label>
+    <input name="judul_lagu" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="judul_lagu" type="text" placeholder="Judul Lagu">
+  </div>
+  <div class="mb-4">
+    <label class="block text-gray-700 text-sm font-bold mb-2" for="artis">
+      Artis
+    </label>
+    <input name="artis" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="artis" type="text" placeholder="Artis">
+  </div>
+  <div class="mb-4">
+    <label class="block text-gray-700 text-sm font-bold mb-2" for="album">
+      Album
+    </label>
+    <input name="album" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="album" type="text" placeholder="Album">
+  </div>
+  <div class="mb-4">
+    <label class="block text-gray-700 text-sm font-bold mb-2" for="durasi">
+      Durasi
+    </label>
+    <input name="durasi" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="durasi" type="text" placeholder="Durasi">
+  </div>
+  <div class="mb-4">
+    <label class="block text-gray-700 text-sm font-bold mb-2" for="size">
+      Size
+    </label>
+    <input name="size" class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="s

@@ -1,0 +1,72 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Halaman Playlist</title>
+</head>
+<!-- component -->
+<% playlist %>
+<link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet">
+<div class="flex items-center justify-center min-h-screen bg-gray-900">
+    <div class="col-span-12">
+        <div class="overflow-auto lg:overflow-visible ">
+            <a href="/playlist/tambah" class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">Tambah!</a>
+            <table class="table text-gray-400 border-separate space-y-6 text-sm rounded">
+                <thead class="bg-gray-800 text-gray-500">
+                    <tr>
+                        <th class="p-3">Judul Playlist</th>
+                        <th class="p-3 text-left">Nama User</th>
+                        <th class="p-3 text-left">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                     <% playlist.forEach(function (item) { %>
+                    <tr class="bg-gray-800">
+                        <td class="p-3">
+                            <%= item.judul_playlist %>
+                        </td>
+                        <td class="p-3">
+                            <%= item.nama_user %>
+                        </td>
+                        <td>
+                        <div >                 
+                       <a href="/playlist/<%= item._id %>" class="text-gray-400 hover:text-gray-100 mx-2">
+                                <i class="material-icons-outlined text-base">edit</i>
+                            </a>
+                            <form class="inline" action="/playlist/<%= item._id %>/destroy" method="POST">
+                                <button type="submit"><i class="material-icons-round text-base">delete_outline</i></button>
+                            </form>
+                        </div>
+                        </td>
+                    </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<style>
+    .table {
+        border-spacing: 0 15px;
+    }
+
+    i {
+        font-size: 1rem !important;
+    }
+
+    .table tr {
+        border-radius: 20px;
+    }
+
+    tr td:nth-child(n+5),
+    tr th:nth-child(n+5) {
+        border-radius: 0 .625rem .625rem 0;
+    }
+
+    tr td:nth-child(1),
+    tr th:nth-child(1) {
+        border-radius: .625rem 0 0 .625rem;
+    }
+</style>
